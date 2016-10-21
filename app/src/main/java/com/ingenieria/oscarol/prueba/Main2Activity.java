@@ -13,6 +13,9 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Main2Activity extends AppCompatActivity {
     EditText dpi, nombre,mail,pass,fecha,dept,user;
     Switch estado;
@@ -36,7 +39,10 @@ public class Main2Activity extends AppCompatActivity {
         user=(EditText)findViewById(R.id.user);
         dept=(EditText)findViewById(R.id.dept);
         estado=(Switch) findViewById(R.id.switch1);
-
+        SimpleDateFormat ss = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = new Date();
+        String currentdate= ss.format(date);
+        fecha.setText(currentdate);
         nombre.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean b) {
