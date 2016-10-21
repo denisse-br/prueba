@@ -53,7 +53,7 @@ public class Main2Activity extends AppCompatActivity {
                     userTemp=nombre.getText().toString().split(" ");
                     userDef=userTemp[0];
                     user.setText(userDef);
-                    Log.i("info",userDef);
+
                     return true;
                 }
             }
