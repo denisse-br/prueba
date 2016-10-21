@@ -15,12 +15,15 @@
             android:id="@+id/dpi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:singleLine="true"
             android:ems="10"
             android:hint="DPI"
             android:inputType="number" />
 
         <EditText
             android:id="@+id/nombre"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -29,6 +32,7 @@
 
         <EditText
             android:id="@+id/correo"
+            android:singleLine="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -37,12 +41,14 @@
 
         <EditText
             android:id="@+id/dept"
+            android:singleLine="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Departamento Laboral" />
 
         <EditText
             android:id="@+id/pass"
+            android:singleLine="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -51,6 +57,7 @@
 
         <EditText
             android:id="@+id/date"
+            android:singleLine="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -59,6 +66,7 @@
 
         <EditText
             android:id="@+id/user"
+            android:singleLine="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"

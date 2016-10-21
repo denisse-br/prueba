@@ -43,29 +43,24 @@ public class Main2Activity extends AppCompatActivity {
         Date date = new Date();
         String currentdate= ss.format(date);
         fecha.setText(currentdate);
-        nombre.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        nombre.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
-            public void onFocusChange(View view, boolean b) {
-                if(b==true){
-                    if(nombre.getText().toString().isEmpty()){
+            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
 
-                    }else{
-                        userTemp=nombre.getText().toString().split(" ");
-                        userDef=userTemp[0];
-                        Log.i("info",userDef);
-                    }
-                }
-            }
-        });
-        mail.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                if(b){
-
+                if(nombre.getText().toString().isEmpty()){
+                    return  false;
+                }else{
+                    userTemp=nombre.getText().toString().split(" ");
+                    userDef=userTemp[0];
                     user.setText(userDef);
+                    Log.i("info",userDef);
+                    return true;
                 }
             }
         });
+
+        //
+
 
 
     }
