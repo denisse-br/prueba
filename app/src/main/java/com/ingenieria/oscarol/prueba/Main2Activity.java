@@ -52,14 +52,21 @@ public class Main2Activity extends AppCompatActivity {
                     }else{
                         userTemp=nombre.getText().toString().split(" ");
                         userDef=userTemp[0];
-                        user.setText(userDef);
                         Log.i("info",userDef);
                     }
-
-
                 }
             }
         });
+        mail.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+                if(b){
+
+                    user.setText(userDef);
+                }
+            }
+        });
+
 
     }
 
